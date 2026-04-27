@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/EstiloClientePD.css">
+    <script src="script/scriptPD.js" defer></script>
+
+    <title>Novo Agendamento</title>
+    <style>
+        @font-face {
+            src: url('Fontes/UberMoveMedium.otf') format('opentype');
+            font-family: 'Uber';
+        }
+    </style>
+
+</head>
+
+<body class="bg-light">
+    <header class="gec-header">
+        <div class="logo-header">
+            <img src="img/logo-fundo-laranja.png" alt="Ponte Dourada" height="45">
+        </div>
+        <div class="header-right">
+            <div class="sector-tag">Setor: <strong>GESTOR / ATENDIMENTO</strong></div>
+                <a href="Index.html" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+            </div>
+    </header>
+    <main class="container">
+        <div class="top-bar">
+            <button class="btn-secondary" onclick="window.history.back()">Voltar</button>
+            <h1>Novo Agendamento de Homecare</h1>
+        </div>
+        <form id="form-agendamento">
+            <fieldset class="form-section">
+                <legend>Vínculo de Atendimento</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="cliente">Selecionar Cliente</label>
+                        <input type="text" id="cliente" name="cliente" required>
+                    </div>
+                    <div class="col">
+                        <label for="profissional">Profissional Responsável</label>
+                        <input type="text" id="profissional" name="profissional" required>
+
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>Informações da Agenda</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="data-visita">Data do Atendimento</label>
+                        <input type="date" id="data-visita" name="data-visita" required>
+                    </div>
+                    <div class="col">
+                        <label for="hora-visita">Horário</label>
+                        <input type="time" id="hora-visita" name="hora-visita" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="motivo">Motivo do Atendimento</label>
+                        <input type="text" id="motivo" name="motivo" placeholder="Ex: Troca de curativo, Medicação...">
+                    </div>
+                    <div class="col">
+                        <label for="prioridade">Prioridade</label>
+                        <select id="prioridade" name="prioridade">
+                            <option value="baixa">Baixa</option>
+                            <option value="media">Média</option>
+                            <option value="alta">Alta (Urgente)</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <div class="form-footer">
+                <button type="button" class="btn-primary" onclick="confirmar()">CONFIRMAR AGENDAMENTO</button>
+            </div>
+        </form>
+    </main>
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ponte Dourada - GEC (Gerenciamento e Controle)</p>
+        </div>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/EstiloClientePD.css">
+    <script src="script/scriptPD.js" defer></script>
+    <script src="https://unpkg.com/imask" defer></script>
+
+    <title>Funcionários</title>
+    <style>
+        @font-face {
+            src: url('Fontes/UberMoveMedium.otf') format('opentype');
+            font-family: 'Uber';
+        }
+    </style>
+
+</head>
+
+<body>
+    <header class="gec-header">
+        <img src="img/PonteDourada.png" alt="Logo Ponte Dourada" class="logo">
+        <div class="sector-tag">Setor: <strong>GESTOR</strong></div>
+    </header>
+    <main class="container">
+        <div class="top-bar">
+            <button class="btn-secondary" onclick="window.history.back()">Voltar</button>
+            <h1>Gestão de Funcionários</h1>
+        </div>
+        <form id="form-funcionario">
+            <fieldset>
+                <legend>Acesso e Identificação</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" required>
+                    </div>
+<div class="col">
+                        <label for="email">E-mail (Login)</label>
+                        <input type="email" id="email" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="senha">Senha</label>
+                        <input type="password" id="senha" required> </div>
+                    <div class="col">
+                        <label for="perfil">Perfil de Acesso</label>
+                        <select id="perfil" required>
+                            <option value="ATENDIMENTO">Atendimento</option>
+                            <option value="GESTOR">Gestor</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset>
+                <legend>Informações Profissionais</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="conselho">Conselho/Registro (CRM/COREN)</label>
+                        <input type="text" id="conselho">
+                    </div>
+                    <div class="col">
+                        <label for="tipo">Especialidade</label>
+                        <input type="text" id="tipo" placeholder="Ex: Enfermeiro, Médico">
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="actions">
+                <button type="submit" class="btn-primary" onclick="cadastrar()">CADASTRAR FUNCIONÁRIO</button>
+            </div>
+        </form>
+    </main> 
+    <footer class="main-footer">
+        <p>Curso Desenvolvedor Full Stack - SEPM/FIRJAN</p>
+    </footer>
+
+</body>
+
+</html>

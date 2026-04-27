@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/EstiloClientePD.css">
+    <script src="script/scriptPD.js" defer></script>
+
+    <title>GEC - Serviços</title>
+    <style>
+        @font-face {
+            src: url('Fontes/UberMoveMedium.otf') format('opentype');
+            font-family: 'Uber';
+        }
+    </style>
+
+</head>
+<body class="bg-light">
+    <header class="gec-header">
+        <div class="logo-header">
+            <img src="img/logo-fundo-laranja.png" alt="Ponte Dourada" height="45s">
+        </div>
+        <div class="sector-tag">Setor: <strong>GESTOR / ATENDIMENTO</strong></div>
+    </header>
+
+    <main class="container">
+        <div class="top-bar">
+            <button class="btn-secondary" onclick="window.history.back()">Voltar</button>
+            <h1>Cadastro de Serviços Homecare</h1>
+        </div>
+        <form id="form-servico">
+            <fieldset class="form-section">
+                <legend>Definição do Serviço</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="nome-servico">Nome do Serviço</label>
+                        <input type="text" id="nome-servico" name="nome-servico" required placeholder="Ex: Fisioterapia Motora">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="desc-servico">Descrição das Atividades</label>
+                        <textarea id="desc-servico" name="desc-servico" rows="4" placeholder="Descreva o que está incluso neste serviço..."></textarea>
+                    </div>
+                </div>
+            </fieldset>
+            <fieldset class="form-section">
+                <legend>Valores e Prazos</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="valor-servico">Valor do Serviço (R$)</label>
+                        <input type="text" id="valor-servico" name="valor-servico" required placeholder="R$ 0,00">
+                    </div>
+                    <div class="col">
+                        <label for="tempo-estimado">Tempo Estimado (em minutos)</label>
+                        <input type="number" id="tempo-estimado" name="tempo-estimado" placeholder="Ex: 60">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="categoria-servico">Categoria</label>
+                        <select id="categoria-servico" name="categoria-servico">
+                            <option value="reabilitacao">Reabilitação</option>
+                            <option value="enfermagem">Enfermagem</option>
+                            <option value="acompanhamento">Acompanhamento</option>
+                            <option value="emergencial">Atendimento Emergencial</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-footer">
+                <button type="button" class="btn-primary" onclick="cadastrar()">CADASTRAR SERVIÇO</button>
+            </div>
+        </form>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ponte Dourada - Catálogo de Especialidades</p>
+        </div>
+    </footer>
+</body>
+
+</html>

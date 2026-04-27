@@ -1,0 +1,113 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/EstiloClientePD.css">
+    <script src="https://unpkg.com/imask" defer></script>
+    <script src="script/scriptPD.js" defer></script>
+
+    <title>Cadastro de Fornecedores - GEC</title>
+    <style>
+        @font-face {
+            src: url('Fontes/UberMoveMedium.otf') format('opentype');
+            font-family: 'Uber';
+        }
+    </style>
+</head>
+
+<body id="fornecedor">
+
+    <header class="gec-header">
+        <div class="logo-container">
+            <img src="img/logo-fundo-laranja.png" alt="Ponte Dourada">
+        </div>
+        <div class="sector-tag">Setor: <strong>GESTOR</strong></div>
+    </header>
+
+    <main class="container">
+        <div class="form-action">
+            <button class="btn-secondary" onclick="window.history.back()">Voltar</button>
+            <h1>Cadastro de Fornecedores</h1>
+        </div>
+
+        <form id="form-fornecedor">
+            <fieldset class="form-section">
+                <legend>Identificação Jurídica</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="razaoSocial">Razão Social</label>
+                        <input type="text" id="razaoSocial" name="razaoSocial" required placeholder="Nome empresarial">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="cnpj">CNPJ</label>
+                        <input type="text" id="cnpj" name="cnpj" required placeholder="00.000.000/0000-00">
+                    </div>
+                    <div class="col">
+                        <label for="telefone">Telefone de Contato</label>
+                        <input type="text" id="telefone" name="telefone" required>
+                    </div>
+                </div>
+            </fieldset>
+
+            <fieldset class="form-section">
+                <legend>Localização</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" required>
+                    </div>
+                    <div class="col">
+                        <label for="logradouro">Logradouro</label>
+                        <input type="text" id="logradouro" name="logradouro" required>
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" name="numero" required>
+                    </div>
+                    <div class="col-lg">
+                        <label for="bairro">Bairro</label>
+                        <input type="text" id="bairro" name="bairro">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                    <div class="col">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                            <option value="">Selecione...</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                            <option value="MG">Minas Gerais</option>
+                            <option value="ES">Espírito Santo</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-footer">
+                <button type="button" class="btn-primary" onclick="cadastrar()">SALVAR FORNECEDOR</button>
+            </div>
+        </form>
+    </main>
+
+    <!-- <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ponte Dourada - Módulo GEC v1.0</p>
+            <span class="system-version">Curso Desenvolvedor Full Stack - SEPM/FIRJAN</span>
+        </div>
+    </footer> -->
+
+</body>
+</html>

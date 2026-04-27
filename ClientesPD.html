@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/EstiloClientePD.css">
+    <title>Cadastro de Clientes</title>
+    <style>
+        @font-face {
+            src: url('Fontes/UberMoveMedium.otf') format('opentype');
+            font-family: 'Uber';
+        }
+    </style>
+</head>
+
+<body class="bg-light">
+    <header class="gec-header">
+        <div class="logo-header">
+            <img src="img/logo-fundo-laranja.png" alt="Ponte Dourada" height="40">
+        </div>
+        <div class="header-right">
+        <div class="sector-tag">Setor: <strong>GESTOR / ATENDIMENTO</strong></div>
+            <a href="Index.html" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        </div>
+    </header>
+
+    <main class="container">
+        <div class="form-action">
+            <button class="btn-secondary" onclick="window.history.back()">Voltar</button>
+            <h1>Cadastro de Clientes</h1>
+        </div>
+        <form action="form-cliente">
+            <fieldset class="form-section">
+                <legend>Dados Pessoais</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="nome">Nome Completo</label>
+                        <input type="text" id="nome" name="nome" required placeholder="Digite seu nome aqui">
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="cpf">CPF</label>
+                            <input type="text" id="cpf" name="cpf" maxlength="14" required>
+                        </div>
+                    </div>
+
+                    <div class="row">
+                        <div class="col">
+                            <label for="dataNascimento">Data Nascimento</label>
+                            <input type="date" id="dataNascimento" name="dataNascimento" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="telefone">Telefone</label>
+                            <input type="text" id="telefone" name="telefone" required>
+                        </div>
+                    </div>
+                    <div class="row">
+                        <div class="col">
+                            <label for="responsavel">Responsável</label>
+                            <input type="text" id="responsavel" name="responsavel">
+                        </div>
+                    </div>
+            </fieldset>
+            <fieldset class="form-section">
+                <legend>Endereço</legend>
+                <div class="row">
+                    <div class="col">
+                        <label for="cep">CEP</label>
+                        <input type="text" id="cep" name="cep" required><br>
+                    </div>
+                    <div class="col">
+                        <label for="logradouro">Logradouro</label>
+                        <input type="text" id="logradouro" name="logradouro" required><br>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-sm">
+                        <label for="numero">Número</label>
+                        <input type="text" id="numero" name="numero" required>
+                    </div>
+                </div>
+                <div class="col-lg">
+                    <label for="bairro">Bairro</label>
+                    <input type="text" id="bairro" name="bairro">
+                </div>
+                </div>
+
+                <div class="row">
+                    <div class="col">
+                        <label for="cidade">Cidade</label>
+                        <input type="text" id="cidade" name="cidade">
+                    </div>
+                    <div class="col">
+                        <label for="estado">Estado</label>
+                        <select id="estado" name="estado">
+                            <option value="">Selecione...</option>
+                            <option value="RJ">Rio de Janeiro</option>
+                            <option value="SP">São Paulo</option>
+                        </select>
+                    </div>
+                </div>
+            </fieldset>
+
+            <div class="form-footer">
+                <button type="button" class="btn-primary" onclick="cadastrar()"">SALVAR CADASTRO</button>
+            </div>
+            </fieldset>
+
+
+        </form>
+    </main>
+
+     <script src=" script/scriptPD.js"></script>
+                    <script src="https://unpkg.com/imask"></script>
+
+</body>
+
+</html>
