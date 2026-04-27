@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/EstiloClientePD.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">
+    <script src="script/scriptPD.js" defer></script>
+
+    <title>GEC - HomepagePD</title>
+    <style>
+        @font-face {
+            src: url('Fontes/UberMoveMedium.otf') format('opentype');
+            font-family: 'Uber';
+        }
+    </style>
+</head>
+<body class="bg-light">
+    <header class="gec-header">
+        <div class="logo-header">
+            <img src="img/logo-fundo-laranja.png" alt="Ponte Dourada" height="40">
+        </div>
+        <div class="header-right">
+            <div class="sector-tag">Setor: <strong id="nome-setor">GESTOR</strong></div>
+            <a href="Index.html" class="btn-logout"><i class="fa-solid fa-right-from-bracket"></i> Sair</a>
+        </div>
+    </header>
+
+    <main class="container-main">
+        <section class="hero-section">
+            <img src="img/logo-fundo-laranja.png" alt="Ponte Dourada" class="logo-principal">
+            <h1>GEC - Gerenciamento e Controle</h1>
+            <p>Bem-vindo ao sistema de controle operacional Homecare</p>
+        </section>
+
+        <nav class="menu-grid">
+            <a href="AgendamentoPD.html" class="menu-item" id="menu-agendamentos">
+                <i class="fa-solid fa-calendar-check"></i>
+                <span>Agendamentos</span>
+            </a>
+            <a href="ProdutosPD.html" class="menu-item" id="menu-produtos">
+                <i class="fa-solid fa-box-archive"></i>
+                <span>Produtos</span>
+            </a>
+            <a href="ServiçosPD.html" class="menu-item" id="menu-servicos">
+                <i class="fa-solid fa-hand-holding-medical"></i>
+                <span>Serviços</span>
+            </a>
+            <a href="FornecedoresPD.html" class="menu-item" id="menu-fornecedores">
+                <i class="fa-solid fa-truck"></i>
+                <span>Fornecedores</span>
+            </a>
+            <a href="FuncionáriosPD.html" class="menu-item" id="menu-profissionais">
+                <i class="fa-solid fa-user-nurse"></i>
+                <span>Profissionais</span>
+            </a>
+            <a href="ClientesPD.html" class="menu-item" id="menu-clientes">
+                <i class="fa-solid fa-hospital-user"></i>
+                <span>Clientes</span>
+            </a>
+        </nav>
+    </main>
+
+    <footer class="main-footer">
+        <div class="footer-content">
+            <p>&copy; 2026 Ponte Dourada - Gerenciamento e Controle Operacional</p>
+            <span class="system-version">Módulo GEC v1.0</span>
+        </div>
+    </footer>
+</body>
+
+</html>
