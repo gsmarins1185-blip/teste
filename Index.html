@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="estilo/EstiloClientePD.css">
+
+    <title>Index - Pontes Dourada</title>
+    <style>
+        @font-face {
+            src: url('Fontes/UberMoveMedium.otf') format('opentype');
+            font-family: 'Uber';
+        }
+    </style>
+
+</head>
+
+<body class="bg-light">
+    <header class="gec-header">
+        <div class="logo-header">
+            <img src="img/logo-fundo-laranja.png" alt="Ponte Dourada" 
+        ></div>
+        <div class="sector-info">
+            <span>Acesso ao Sistema <strong></strong></span>
+        </div>
+    </header>
+    <main class="container login-center">
+        <div class="form-section">
+            <form action="">
+                <h2>Efetuar Login</h2>
+                <div class="row">
+                    <div class="col">
+                        <label for="user">Usuário:</label>
+                        <input type="text" id="user" name="user" placeholder="Digite seu usuário">
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col">
+                        <label for="senha">Senha:</label>
+                        <input type="password" id="senha" name="senha" placeholder="Digite sua senha">
+                    </div>
+                </div>
+                <button type="button" class="btn-primary" onclick="logar()">LOGAR</button>
+            </form>
+            <div class="login-footer-links">
+                <!-- <p><a href="Clientes.html">Clique aqui para se cadastrar...</a></p> -->
+            </div>
+        </div>
+    </main>
+    <script src="script/scriptPD.js" defer></script>
+</body>
+
+</html>
